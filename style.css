@@ -1,16 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Lobster&family=Montserrat:ital,wght@1,100;1,200&family=Yellowtail&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Lobster&family=Montserrat:ital,wght@1,100;1,200&family=Sorts+Mill+Goudy:ital@1&family=Yellowtail&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Lobster&family=Montserrat:ital,wght@1,100;1,200&family=Sorts+Mill+Goudy:ital@1&family=Yellowtail&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/* body {
-  background-image:url(./img/netflix-background-image\ 1.png) ;
-} */
+body {
+  background-image: url(./img/netflix-background-image\ 1.png);
+  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /*background is fixed and the frontground is moving*/
+  height: 100vh;
+}
 #container {
   max-width: 1240px;
-  height: 1236px;
+  /* height: 1236px; */
   background-color: rgba(0, 0, 0, 0.3);
   margin: auto;
   margin-top: 30px;
@@ -18,15 +24,67 @@
 #title {
   font-size: 3.1rem;
   color: white;
-  font-family: 'Bowlby One SC', cursive;
+  font-family: "Bowlby One SC", cursive;
 }
-span{
-    color: #ff0000;
+span {
+  color: #ff0000;
 }
-#description{
-    font-family:'Sorts Mill Goudy', serif;
-    /* color: white; */
+#description {
+  font-family: "Sorts Mill Goudy", serif;
+  /* font-family: Bowlby; */ /*We can download the font family from google and use as a local by giving the name as we wish*/
+  color: white;
 }
-.header{
-    text-align: center;
+.header {
+  text-align: center;
+}
+textarea {
+  resize: none;
+}
+#survey-form-container {
+  width: 500px;
+  background-color: rgba(0, 0, 0, 0.8); /*0.8 is the opacity of the color*/
+  margin: auto;
+  padding: 30px 40px;
+
+  /* border: 2px solid red; */
+}
+#name,
+#age,
+#email,
+#dropdown,
+#feedback {
+  width: 100%;
+  padding: 12px 10px;
+  margin-top: 10px;
+}
+
+.input-box {
+  margin-top: 10px;
+}
+
+#form-button {
+  width: 160px;
+  height: 45px;
+  background-color: #ff0000;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  cursor: grabbing; /*We can make it pointer or many things... */
+}
+
+#form-button:hover {
+  background-color: white;
+  color: #ff0000;
+}
+.form-submit {
+  /* text-align: center; */
+  margin: auto; /*Margin auto works only we give width*/
+  width: 160px;
+  margin-top: 15px;
+}
+
+/* How to import downloaded fonts*/
+@font-face {
+  font-family: Bowlby;
+  src: url(./BowlbyOneSC-Regular.ttf);
 }
